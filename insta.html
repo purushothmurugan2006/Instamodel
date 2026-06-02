@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Insta-Style Feed — Purushoth</title>
+    <link rel="stylesheet" href="styleinsta.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="logo">
+                <img src="https://i.imgur.com/4AiXzf8.png" alt="logo" />
+                <span>purushoth</span>
+            </div>
+
+            <div class="search">
+                <input type="search" id="search" placeholder="Search" />
+            </div>
+
+            <nav class="icons">
+                <button class="icon-btn" title="Home">🏠</button>
+                <button class="icon-btn" title="Messages">✉</button>
+                <button class="icon-btn" title="New">➕</button>
+                <button class="icon-btn" title="Explore">🔍</button>
+                <button class="icon-btn" title="Profile">👤</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container layout">
+        <section class="main-col">
+            <!-- Stories -->
+            <div class="stories">
+                <div class="stories-scroll">
+                    <div class="story">
+                        <img src="https://picsum.photos/seed/s1/80" alt="story 1" />
+                        <p>friend1</p>
+                    </div>
+                    <div class="story">
+                        <img src="https://picsum.photos/seed/s2/80" alt="story 2" />
+                        <p>friend2</p>
+                    </div>
+                    <div class="story">
+                        <img src="https://picsum.photos/seed/s3/80" alt="story 3" />
+                        <p>friend3</p>
+                    </div>
+                    <div class="story">
+                        <img src="https://picsum.photos/seed/s4/80" alt="story 4" />
+                        <p>friend4</p>
+                    </div>
+                    <div class="story">
+                        <img src="https://picsum.photos/seed/s5/80" alt="story 5" />
+                        <p>friend5</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feed -->
+            <div id="feed" class="feed">
+                <!-- Posts will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <aside class="side-col">
+            <div class="profile-card">
+                <img class="avatar" src="https://picsum.photos/seed/me/80" alt="me" />
+                <div>
+                    <strong>Purushoth M</strong>
+                    <p class="muted">Student • Web Dev</p>
+                </div>
+            </div>
+
+            <div class="suggestions">
+                <p class="muted small">Suggestions for you</p>
+                <div class="suggestion">
+                    <img src="https://picsum.photos/seed/a1/40" alt="" />
+                    <div>
+                        <strong>dev_friend</strong>
+                        <p class="muted small">Followed by user123</p>
+                    </div>
+                    <button class="follow">Follow</button>
+                </div>
+
+                <div class="suggestion">
+                    <img src="https://picsum.photos/seed/a2/40" alt="" />
+                    <div>
+                        <strong>design_guru</strong>
+                        <p class="muted small">New</p>
+                    </div>
+                    <button class="follow">Follow</button>
+                </div>
+            </div>
+
+            <footer class="muted small" style="margin-top: 12px;">
+                © 2025 • Purushoth Portfolio
+            </footer>
+        </aside>
+    </main>
+
+    <template id="post-template">
+        <article class="post">
+            <header class="post-header">
+                <div class="post-user">
+                    <img class="post-avatar" src="" alt="avatar" />
+                    <div>
+                        <strong class="post-username"></strong>
+                        <p class="muted post-location"></p>
+                    </div>
+                </div>
+                <button class="icon-btn more">⋯</button>
+            </header>
+
+            <div class="post-image-wrap">
+                <img class="post-image" src="" alt="post image" />
+                <div class="heart-anim">❤</div>
+            </div>
+
+            <div class="post-actions">
+                <div class="left-actions">
+                    <button class="icon-btn like-btn" title="Like" aria-pressed="false">
+                        <svg class="heart" viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.1 21.35l-1.1-.99C5.14 15.24 2 12.39 2 8.5 2 6 3.99 4 6.5 4c1.74 0 3.41.81 4.4 2.09C11.09 4.81 12.76 4 14.5 4 17.01 4 19 6 19 8.5c0 3.89-3.14 6.74-8.9 11.86l-1 .99z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="icon-btn" title="Comment">💬</button>
+                    <button class="icon-btn" title="Share">✈</button>
+                </div>
+                <div class="right-actions">
+                    <button class="icon-btn" title="Save">🔖</button>
+                </div>
+            </div>
+
+            <div class="post-meta">
+                <div class="likes"><strong class="likes-count">0</strong> likes</div>
+                <div class="caption"><strong class="post-username"></strong> <span class="post-caption"></span></div>
+
+                <div class="comments-list"></div>
+
+                <form class="comment-form">
+                    <input class="comment-input" placeholder="Add a comment..." />
+                    <button type="submit" class="post-btn">Post</button>
+                </form>
+            </div>
+        </article>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
